@@ -38,10 +38,10 @@ public class TestA2E5 {
 	private int testncl = 17;
 	private int testncla = 3;
 	private int testngener = 8;
-	private int testnassoc = 11;
+	private int testnassoc = 12;
 	private int testnattr = 13;
 	private int testnop = 6;
-	private int testnenum = 2;
+	private int testnenum = 3;
 
 	private static String modelName = "A2E5.uml";
 	private static String path = "../../main/A2E5/";
