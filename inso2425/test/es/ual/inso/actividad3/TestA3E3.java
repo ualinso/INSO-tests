@@ -271,9 +271,9 @@ public class TestA3E3 {
   public void testLoop1Atacar() {
     if (atacar != null) {
       boolean ll1 = coveredLoopD1.contains("Guerrero");
-      boolean ll2 = coveredLoopD1.contains("Ataque");
+      boolean ll2 = coveredLoopD1.contains("Aldea");
       assertTrue("El bucle principal no abarca correctamente la clase Guerrero en 'atacar'.", ll1);
-      assertTrue("El bucle principal no abarca correctamente la clase Ataque en 'atacar'.", ll2);
+      assertTrue("El bucle principal no abarca correctamente la clase Aldea en 'atacar'.", ll2);
     }
   }
 
