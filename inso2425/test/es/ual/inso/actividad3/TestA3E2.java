@@ -48,7 +48,7 @@ public class TestA3E2 {
   private static Vector<String> lld1;
   private static Vector<String> coveredLoopD1;
 
-  private static Behavior generarInformesRecomendaciones;
+  private static Behavior generarInformeRecomendaciones;
   private static Vector<String> lld2;
   private static Vector<String> coveredAltD2;
 
@@ -127,9 +127,9 @@ public class TestA3E2 {
 
           }
 
-          if (dseName.equalsIgnoreCase("generarInformesRecomendaciones")) {
-            generarInformesRecomendaciones = ob;
-            loadGenerarInformesRecomendaciones(ob);
+          if (dseName.equalsIgnoreCase("generarInformeRecomendaciones")) {
+            generarInformeRecomendaciones = ob;
+            loadGenerarInformeRecomendaciones(ob);
 
           }
         }
@@ -252,7 +252,7 @@ public class TestA3E2 {
     }
   }
 
-  private static void loadGenerarInformesRecomendaciones(org.eclipse.uml2.uml.Behavior dse) {
+  private static void loadGenerarInformeRecomendaciones(org.eclipse.uml2.uml.Behavior dse) {
 
     lld2 = new Vector<String>();
     coveredAltD2 = new Vector<String>();
@@ -365,7 +365,7 @@ public class TestA3E2 {
   public void testDiagramasDeSecuencia() {
 
     assertNotEquals("No existe el diagrama 'crearRecomendacion'.", crearRecomendacion, null);
-    assertNotEquals("No existe el diagrama 'generarInformesRecomendaciones'.", generarInformesRecomendaciones, null);
+    assertNotEquals("No existe el diagrama 'generarInformeRecomendaciones'.", generarInformeRecomendaciones, null);
 
   }
 
@@ -382,14 +382,14 @@ public class TestA3E2 {
   }
 
   @Test
-  public void testLifeLinesGenerarInformesRecomendaciones() {
-    if (generarInformesRecomendaciones != null) {
+  public void testLifeLinesGenerarInformeRecomendaciones() {
+    if (generarInformeRecomendaciones != null) {
       boolean ll1 = lld2.contains("Mentor");
       boolean ll2 = lld2.contains("Libro");
       boolean ll3 = lld2.contains("Recomendacion");
-      assertTrue("La clase Mentor no está bien representada en 'generarInformesRecomendaciones'.", ll1);
-      assertTrue("La clase Libro no está bien representada en 'generarInformesRecomendaciones'.", ll2);
-      assertTrue("La clase Recomendacion no está bien representada en 'generarInformesRecomendaciones'.", ll3);
+      assertTrue("La clase Mentor no está bien representada en 'generarInformeRecomendaciones'.", ll1);
+      assertTrue("La clase Libro no está bien representada en 'generarInformeRecomendaciones'.", ll2);
+      assertTrue("La clase Recomendacion no está bien representada en 'generarInformeRecomendaciones'.", ll3);
     }
   }
 
@@ -406,14 +406,14 @@ public class TestA3E2 {
   }
 
   @Test
-  public void testAlt1GenerarInformesRecomendaciones() {
-    if (generarInformesRecomendaciones != null) {
+  public void testAlt1GenerarInformeRecomendaciones() {
+    if (generarInformeRecomendaciones != null) {
       boolean ll1 = coveredAltD2.contains("Mentor");
       boolean ll2 = coveredAltD2.contains("Libro");
       boolean ll3 = coveredAltD2.contains("Recomendacion");
-      assertTrue("El bloque principal no abarca correctamente la clase Mentor en 'generarInformesRecomendaciones'.", ll1);
-      assertTrue("El bloque principal no abarca correctamente la clase Libro en 'generarInformesRecomendaciones'.", ll2);
-      assertTrue("El bloque principal no abarca correctamente la clase Recomendacion en 'generarInformesRecomendaciones'.", ll3);
+      assertTrue("El bloque principal no abarca correctamente la clase Mentor en 'generarInformeRecomendaciones'.", ll1);
+      assertTrue("El bloque principal no abarca correctamente la clase Libro en 'generarInformeRecomendaciones'.", ll2);
+      assertTrue("El bloque principal no abarca correctamente la clase Recomendacion en 'generarInformeRecomendaciones'.", ll3);
     }
   }
 
