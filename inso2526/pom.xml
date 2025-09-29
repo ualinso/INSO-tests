@@ -1,0 +1,171 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>ual.inso</groupId>
+	<artifactId>inso2526</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- JJ defined properties -->
+		<repo-tests>**/ual/inso/repo/**/*Tests.java</repo-tests>
+		<test-junit4>**/es/ual/inso/**/*Tests.java</test-junit4>
+
+	</properties>
+
+	<build>
+
+		<sourceDirectory>src</sourceDirectory>
+		<testSourceDirectory>test</testSourceDirectory>
+
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.7.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+				</configuration>
+
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.14.1</version>
+				<configuration>
+					<includes>
+						<include>${repo-tests}</include>
+						<include>${test-junit4}</include>
+					</includes>
+				</configuration>
+				<executions>
+
+					<execution>
+						<id>integration-test</id>
+						<phase>integration-test</phase>
+						<goals>
+							<goal>test</goal>
+						</goals>
+						<configuration>
+							<skip>false</skip>
+							<includes>
+								<include>${test-junit4}</include>
+							</includes>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
+
+		</plugins>
+	</build>
+
+	<repositories>
+		<repository>
+			<id>repo1</id>
+			<name>default</name>
+			<url>https://repo.maven.apache.org/maven2</url>
+		</repository>
+		<repository>
+			<id>repo2</id>
+			<name>uml2resources</name>
+			<url>
+				https://mvnrepository.com/artifact/org.eclipse.uml2/org.eclipse.uml2.uml</url>
+		</repository>
+
+	</repositories>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.common</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore.change</artifactId>
+			<version>2.11.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.emf</groupId>
+			<artifactId>org.eclipse.emf.ecore.xmi</artifactId>
+			<version>2.12.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.uml2</groupId>
+			<artifactId>uml</artifactId>
+			<version>5.0.0-v20140602-0749</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/uml-5.0.0-v20140602-0749.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.uml2</groupId>
+			<artifactId>resources</artifactId>
+			<version>5.0.0-v20140602-0749</version>
+			<scope>system</scope>
+			<systemPath>
+				${project.basedir}/lib/resources-5.0.0-v20140602-0749.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.uml2</groupId>
+			<artifactId>common</artifactId>
+			<version>2.0.0-v20140602-0749</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/common-2.0.0-v20140602-0749.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.uml2</groupId>
+			<artifactId>types</artifactId>
+			<version>2.0.0-v20140602-0749</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/types-2.0.0-v20140602-0749.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.uml2</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.0.0-v20140602-0749</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/standard-1.0.0-v20140602-0749.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>org.eclipse.emf.mapping</groupId>
+			<artifactId>ecore2xml</artifactId>
+			<version>2.3.0-v200706262000</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/ecore2xml-2.3.0-v200706262000.jar</systemPath>
+		</dependency>
+
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/org.jsoup/jsoup -->
+		<dependency>
+			<groupId>org.jsoup</groupId>
+			<artifactId>jsoup</artifactId>
+			<version>1.11.2</version>
+		</dependency>
+
+	</dependencies>
+
+</project>
