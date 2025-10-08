@@ -43,7 +43,7 @@ public class TestA1E3 {
   private static int nusecase = 19;
   private static int ngenusecase = 2;
   private static int ngenactor = 0;
-  private static int ninclude = 6;
+  private static int ninclude = 7;
   private static int nextend = 6;
   private static int nassociation = 6;
   private static boolean shared = false;
