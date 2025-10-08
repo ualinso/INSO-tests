@@ -40,13 +40,13 @@ public class TestA1E5 {
   private static List<Association> associationList;
 
   private static int nactor = 5;
-  private static int nusecase = 21;
-  private static int ngenusecase = 9;
+  private static int nusecase = 27;
+  private static int ngenusecase = 5;
   private static int ngenactor = 3;
-  private static int ninclude = 6;
-  private static int nextend = 4;
-  private static int nassociation = 10;
-  private static boolean shared = false;
+  private static int ninclude = 5;
+  private static int nextend = 5;
+  private static int nassociation = 18;
+  private static boolean shared = true;
 
 
   private static String modelName = "A1E5.uml";
