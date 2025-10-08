@@ -6,7 +6,7 @@ import org.junit.runners.Suite.SuiteClasses;
 
 @RunWith(Suite.class)
 @SuiteClasses({ 
-  /*TestA1E1.class,
+  TestA1E1.class/*,
   TestA1E2.class,
   TestA1E3.class,
   TestA1E4.class,
