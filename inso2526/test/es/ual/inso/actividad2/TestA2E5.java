@@ -38,7 +38,7 @@ public class TestA2E5 {
 	private int testncl = 12;
 	private int testncla = 0;
 	private int testngener = 3;
-	private int testnassoc = 12;
+	private int testnassoc = 15;
 	private int testnattr = 48;
 	private int testnop = 14;
 	private int testnenum = 4;
