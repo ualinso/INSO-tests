@@ -32,19 +32,19 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-public class TestA2E4 {
+public class TestA2E5 {
 
-	private String testpackage = "actividad2ejercicio4";
-	private int testncl = 9;
-	private int testncla = 1;
-	private int testngener = 5;
-	private int testnassoc = 9;
-	private int testnattr = 22;
-	private int testnop = 56;
-	private int testnenum = 3;
+	private String testpackage = "actividad2ejercicio5";
+	private int testncl = 12;
+	private int testncla = 0;
+	private int testngener = 3;
+	private int testnassoc = 12;
+	private int testnattr = 48;
+	private int testnop = 14;
+	private int testnenum = 4;
 
-	private static String modelName = "A2E4.uml";
-	private static String path = "../../main/A2E4/";
+	private static String modelName = "A2E5.uml";
+	private static String path = "../../main/A2E5/";
 
 	private static ResourceSet resSet;
 	private static String packageName;
