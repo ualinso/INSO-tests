@@ -8,8 +8,8 @@ import org.junit.runners.Suite.SuiteClasses;
 @SuiteClasses({ 
   TestA2E1.class, 
   TestA2E2.class,
-  TestA2E3.class/*,
-  TestA2E4.class,
+  TestA2E3.class,
+  TestA2E4.class/*,
   TestA2E5.class*/
 })
 public class AllTests {
