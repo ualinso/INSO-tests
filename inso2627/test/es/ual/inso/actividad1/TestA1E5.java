@@ -47,7 +47,7 @@ public class TestA1E5 {
   private static int ngenactor = 3;
   private static int ninclude = 9;
   private static int nextend = 3;
-  private static int nassociation = 9;
+  private static int nassociation = 10;
   private static boolean shared = true;
 
 
