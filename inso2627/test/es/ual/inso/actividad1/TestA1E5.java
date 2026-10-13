@@ -42,12 +42,12 @@ public class TestA1E5 {
   private static List<Association> associationList;
 
   private static int nactor = 5;
-  private static int nusecase = 27;
-  private static int ngenusecase = 5;
+  private static int nusecase = 19;
+  private static int ngenusecase = 3;
   private static int ngenactor = 3;
-  private static int ninclude = 5;
-  private static int nextend = 5;
-  private static int nassociation = 18;
+  private static int ninclude = 9;
+  private static int nextend = 3;
+  private static int nassociation = 9;
   private static boolean shared = true;
 
 
