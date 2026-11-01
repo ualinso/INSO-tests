@@ -39,6 +39,7 @@
 						<include>${test-junit4}</include>
 					</includes>
 					<printSummary>false</printSummary>
+					<runOrder>alphabetical</runOrder>
 					<properties>
 						<property>
 							<name>listener</name>
