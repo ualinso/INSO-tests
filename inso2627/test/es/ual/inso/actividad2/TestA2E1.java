@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Operation;
@@ -44,6 +45,7 @@ public class TestA2E1 {
 	private int testnattr = 8;
 	private int testnop = 1;
 	private int testnenum = 1;
+	private int testndep = 2;
 
 	private static String modelName = "A2E1.uml";
 	private static String path = "../../main/A2E1/";
@@ -61,6 +63,7 @@ public class TestA2E1 {
 	// private static int numberOfAttributtesFromAssociations;
 	private static int numberOfOperations;
 	private static int numberOfEnumerations;
+	private static int numberOfDependencies;
 	
 	
 	
@@ -232,6 +235,18 @@ public class TestA2E1 {
       }
     }
 
+    numberOfDependencies = 0;
+    countDependencies(model);
+    countDependencies(pack);
+
+  }
+
+  private static void countDependencies(org.eclipse.uml2.uml.Package p) {
+    for (PackageableElement pe : p.getPackagedElements()) {
+      if (pe instanceof Dependency) {
+        numberOfDependencies++;
+      }
+    }
   }
 
 	@Test
@@ -305,5 +320,13 @@ public class TestA2E1 {
 	    System.out.println("El número de tipos enumerados del modelo es: " + numberOfEnumerations);
 	    assertEquals("El número recomendado de tipos enumerados es " + testnenum, testnenum, numberOfEnumerations);
 	  }
+
+
+	@Test
+	public void testNumeroDeDependencias() {
+
+		System.out.println("El número de dependencias del modelo es: " + numberOfDependencies);
+		assertEquals("El número recomendado de dependencias es " + testndep, testndep, numberOfDependencies);
+	}
 
 }
