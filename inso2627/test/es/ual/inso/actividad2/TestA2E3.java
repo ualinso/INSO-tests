@@ -38,13 +38,13 @@ import org.junit.Test;
 public class TestA2E3 {
 
 	private String testpackage = "actividad2ejercicio3";
-	private int testncl = 11;
-	private int testncla = 0;
-	private int testngener = 1;
-	private int testnassoc = 13;
-	private int testnattr = 23;
-	private int testnop = 9;
-	private int testnenum = 2;
+	private int testncl = 8;
+	private int testncla = 1;
+	private int testngener = 3;
+	private int testnassoc = 12;
+	private int testnattr = 14;
+	private int testnop = 0;
+	private int testnenum = 0;
 	private int testndep = 0;
 
 	private static String modelName = "A2E3.uml";
