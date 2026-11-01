@@ -37,12 +37,12 @@ import org.junit.Test;
 public class TestA2E1 {
 
 	private String testpackage = "actividad2ejercicio1";
-	private int testncl = 8;
+	private int testncl = 5;
 	private int testncla = 1;
-	private int testngener = 3;
-	private int testnassoc = 9;
-	private int testnattr = 12;
-	private int testnop = 8;
+	private int testngener = 2;
+	private int testnassoc = 3;
+	private int testnattr = 8;
+	private int testnop = 1;
 	private int testnenum = 1;
 
 	private static String modelName = "A2E1.uml";
