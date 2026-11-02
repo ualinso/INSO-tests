@@ -23,6 +23,7 @@ import org.eclipse.uml2.uml.Class;
 import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.Model;
+import org.eclipse.uml2.uml.NamedElement;
 import org.eclipse.uml2.uml.Operation;
 import org.eclipse.uml2.uml.PackageableElement;
 import org.eclipse.uml2.uml.Property;
@@ -244,9 +245,15 @@ public class TestA2E1 {
   private static void countDependencies(org.eclipse.uml2.uml.Package p) {
     for (PackageableElement pe : p.getPackagedElements()) {
       if (pe instanceof Dependency) {
+        Dependency d = (Dependency) pe;
+        System.out.println("---- Dependency: " + firstName(d.getClients()) + " --> " + firstName(d.getSuppliers()));
         numberOfDependencies++;
       }
     }
+  }
+
+  private static String firstName(List<NamedElement> elements) {
+    return elements.isEmpty() ? "?" : elements.get(0).getName();
   }
 
 	@Test
