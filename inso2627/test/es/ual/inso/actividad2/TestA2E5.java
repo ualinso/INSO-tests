@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.resource.impl.ResourceSetImpl;
 import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import org.eclipse.uml2.uml.Association;
 import org.eclipse.uml2.uml.Class;
+import org.eclipse.uml2.uml.Dependency;
 import org.eclipse.uml2.uml.Enumeration;
 import org.eclipse.uml2.uml.Model;
 import org.eclipse.uml2.uml.Operation;
@@ -38,12 +39,13 @@ public class TestA2E5 {
 
 	private String testpackage = "actividad2ejercicio5";
 	private int testncl = 12;
-	private int testncla = 0;
-	private int testngener = 3;
-	private int testnassoc = 15;
-	private int testnattr = 48;
-	private int testnop = 14;
-	private int testnenum = 4;
+	private int testncla = 2;
+	private int testngener = 5;
+	private int testnassoc = 11;
+	private int testnattr = 17;
+	private int testnop = 11;
+	private int testnenum = 1;
+	private int testndep = 7;
 
 	private static String modelName = "A2E5.uml";
 	private static String path = "../../main/A2E5/";
@@ -61,6 +63,7 @@ public class TestA2E5 {
 	// private static int numberOfAttributtesFromAssociations;
 	private static int numberOfOperations;
 	private static int numberOfEnumerations;
+	private static int numberOfDependencies;
 	
 	
 	
@@ -232,6 +235,18 @@ public class TestA2E5 {
       }
     }
 
+    numberOfDependencies = 0;
+    countDependencies(model);
+    countDependencies(pack);
+
+  }
+
+  private static void countDependencies(org.eclipse.uml2.uml.Package p) {
+    for (PackageableElement pe : p.getPackagedElements()) {
+      if (pe instanceof Dependency) {
+        numberOfDependencies++;
+      }
+    }
   }
 
 	@Test
@@ -305,5 +320,13 @@ public class TestA2E5 {
 	    System.out.println("El número de tipos enumerados del modelo es: " + numberOfEnumerations);
 	    assertEquals("El número recomendado de tipos enumerados es " + testnenum, testnenum, numberOfEnumerations);
 	  }
+
+
+	@Test
+	public void testNumeroDeDependencias() {
+
+		System.out.println("El número de dependencias del modelo es: " + numberOfDependencies);
+		assertEquals("El número recomendado de dependencias es " + testndep, testndep, numberOfDependencies);
+	}
 
 }
