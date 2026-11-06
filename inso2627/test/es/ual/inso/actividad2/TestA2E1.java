@@ -43,7 +43,7 @@ public class TestA2E1 {
 	private int testncla = 1;
 	private int testngener = 2;
 	private int testnassoc = 3;
-	private int testnattr = 8;
+	private int testnattr = 9;
 	private int testnop = 1;
 	private int testnenum = 1;
 	private int testndep = 2;
